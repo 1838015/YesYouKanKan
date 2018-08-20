@@ -1,0 +1,155 @@
+
+body {
+    background-color: #bfffbf;
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    color: #202e21;
+    margin: 0;
+    padding: 0;
+}
+#description{
+    font-size: 1.3em;
+}
+#duprass-label{
+    margin-right: 75px;
+    /* This is not the best way to even it out */
+    /* Z: I would probably put all of these labels in a div and then align them with text align if they're text or display: flex on the parent div and position them like that. You should also consider position: absolute, relative, etc. and using top,bottom, left, and right to position things because you are correct, margin is generally not ideal because it pushes away everything else.  */
+    
+}
+#duprass {
+    padding-right: 10px;
+    height: 1.25em;
+    width: 33.42%;
+    border: 1px solid #202e21;
+    border-radius: 2px;
+    margin: 10px;
+    padding:5px;
+    vertical-align: middle;
+    /* I want to spread these out */
+    /* Z: I would make the containing div #duprass larger and then you will have the room to spread out the child elements inside */
+}
+#dropdown{
+    height: 1.9em;
+    width: 15%;
+    border: 1px solid #202e21;
+    border-radius: 2px;
+    margin: 10px;
+    vertical-align: middle;
+    float:left;
+}
+#title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+.sub {
+    font-size: 2rem;
+    text-align: center;
+    line-height: .5em;
+}
+
+.main {
+    display: grid;
+    width: 100vw;
+    height: 100vw;
+    grid-template-columns: 15vw 70vw 15vw;
+    grid-template-rows: 100vh;
+    grid-template-areas: 'links form space'
+}
+
+.form {
+grid-area: form;
+background-color: #fafafa;
+text-align:center;
+border-radius: 10px;
+height:160%;
+/* what is this a percentage of? */
+/* Z: Height in percent is defined by the containing block. If it goes over what the containing block size is, then  it will overflow that element. 160% is overflowing its container. You want to avoid this because it's unpredictable. */
+}
+.formcontent{
+    width: 50vw;
+    margin: 0 auto;
+    background-color: #fafafa;
+}
+.link{
+    line-height: 3em;
+    color:#567753;
+}
+.label{
+    font-size:1.5rem;
+    font-weight:bold;
+    line-height:3em;
+    padding-left: 1em;
+}
+.links{
+    grid-area: links;
+    width: 100%;
+    justify-content: center;    
+}
+.call{
+    text-align:right;
+    width: 48%;
+    font-weight: bold;
+    font-size: 1.3em;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+}
+.response{
+    width: 48%;
+    display: inline-block;
+    vertical-align:middle;
+    /* Z: I don't think these vertical-align properties are actually doing anything for you. Probably don't need 'em. */
+    text-align:right; 
+}
+.input-field{
+    height: 1.7em;
+    width: 100%;
+    border: 1px solid #202e21;
+    border-radius: 2px;
+    /* padding: 5px; */
+    margin: 10px;
+    vertical-align: middle;
+}
+.input-fieldmod{
+    font-family: arial;
+    height: 8em;
+    width: 200px;
+     border: 1px solid #202e21;
+    border-radius: 2px;
+    margin: 10px; 
+     vertical-align: middle;
+     
+    /* loads with blank spaces, when deleted will show placeholder? */
+    /* Z: No fucking clue. It is probably inheriting from somewhere else but I tested by making another text area and it works fine. So it's gotta be related to your styles somewhere on that class or its parents. */
+}
+#submit{
+    height: 1.7em;
+    width: 25%;
+    border: 1px solid #202e21;
+    border-radius: 2px;
+    /* padding: 5px; */
+    margin: 10px;
+    vertical-align: middle;
+}
+.pics{
+    grid-area: space;
+    width:90%;
+    /* padding:2.5%; */
+    margin-top:25%;
+    MARGIN-LEFT:2.5%;
+    margin-right:2.5%;
+    width:95%;
+    height:auto;
+    }
+    .images{
+        width:100%;
+    }
+    .cap{
+        text-align:center
+    }
+
+/* I really want to add images to the left column (grid area space) but I've done fucked something up.
+ <div class="pics"><img https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Cats-cradle.svg/513px-Cats-cradle.svg.png> <div class="pics"></div> */
+
+ /* Go ahead and try it and report back. PS make sure you are closing your tags. <div></div>, if you don't have that '/' there then it won't work right. I see a number of divs that need closing. So double check those. might have something to do with it. Keep working though -- looks good!! */
